@@ -24,7 +24,11 @@ namespace screendemo
             }
 
             int urlArgIndex = argsList.IndexOf("--url");
-            string url = "http://localhost:8000/";
+            //string url = "http://localhost:8000/";
+
+            // required : root permission to run 
+            // + firewall inbound rule: TCP local port:8000
+            string url = "http://172.16.54.12:8000/";
 
             if (urlArgIndex != -1)
             {
